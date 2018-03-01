@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+my_bash_dir=$(dirname $0)
+this_machine_name=`uname -n`
+this_machine_script=${my_bash_dir}/init/machines/${this_machine_name%%.*}.bash
+
+# TODO: better instructions
+read -r -d "" instructions <<"EOF"
+# This is a startup script for $this_machine_name
+# Add anything you need 
+EOF
+
+if [[ -e $this_machine_script ]] ; then
+    echo !! $this_machine_script already exists !!
+    # maybe we should just bring up vim with the instruction if it exists
+    # maybe this script should be edit_this_machine
+else
+    echo "$instructions" > $this_machine_script
+    my_editor=${EDITOR:-vim}
+    $my_editor $this_machine_script
+fi
+

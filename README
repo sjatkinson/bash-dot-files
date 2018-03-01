@@ -8,4 +8,6 @@ Running the install script will create symlinks in your home diretory to bashpro
 # Design
 Global settings, aliases, and options are all set in bashrc. After this, it sources external files for: common functions, platform specific settings, machine specific settings, and work settings.
 
+To add a new machine with a custom script, run the add_this_machine script. It will create a new file in the proper place and bring up your editor.
+
 These scripts run on bash 4.4. No attempt is made to make them portable to other versions, or other shells.
