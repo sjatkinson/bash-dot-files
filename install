@@ -1,0 +1,12 @@
+#/usr/bin/env bash
+
+old_dir=$(pwd)
+my_bash_dir=$(dirname $0)
+
+cd ${my_bash_dir}
+dot_dir=${my_bash_dir}/dot-files
+
+echo ${dot_dir}
+
+ln -s $dot_dir/bashrc $HOME/.bashrc
+ln -s $dot_dir/bashprofile $HOME/.bash_profile

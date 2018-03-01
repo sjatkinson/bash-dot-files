@@ -1,0 +1,8 @@
+#/usr/bin/env bash
+
+old_dir=$(pwd)
+cd $(dirname $0)
+dot_dir=$(ped)/dot-files
+
+echo $old_dir
+echo $dot_dir
