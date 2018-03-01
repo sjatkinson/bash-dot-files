@@ -1,3 +1,2 @@
 if [ -f ~/.bashrc ]; then . ~/.bashrc; fi
 
-echo done with .profile

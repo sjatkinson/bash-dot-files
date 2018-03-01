@@ -5,8 +5,8 @@ if [[ $at_work ]] ; then
     if [[ -e $dev_env ]] ; then
         source $dev_env $WORK_DIR
     else
-        echo !! $dev_env does not exist !!
+        echo !! No work script - $dev_env !!
     fi
 else
-    echo "running at home"
+    echo !! This must be a non-work computer, or is not set up !!
 fi

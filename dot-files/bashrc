@@ -20,4 +20,3 @@ source $init_dir/work.bash
 
 PROMPT_COMMAND=__prompt_command # prompt function is in functions.bash
 
-echo done with bashrc
