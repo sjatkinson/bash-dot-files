@@ -1,0 +1,11 @@
+# StevenA's bash startup files
+
+These startup files are specific to my work. They are not suitable, as is, for anyone else. 
+
+# Install
+Running the install script will create symlinks in your home diretory to bashprofile and bashrc files in ./dot-files.
+
+# Design
+Global settings, aliases, and options are all set in bashrc. After this, it sources external files for: common functions, platform specific settings, machine specific settings, and work settings.
+
+These scripts run on bash 4.4. No attempt is made to make them portable to other versions, or other shells.
