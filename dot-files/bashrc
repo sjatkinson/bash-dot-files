@@ -1,4 +1,9 @@
-init_dir=$(dirname $(dirname `readlink $BASH_SOURCE`))/init
+# This sucks, but readlink on Mac has no way of fully
+# expanding the link path. Homebrew has a package
+# coreutils including greadlink which can.
+[ `uname -s` == "Darwin" ] && alias readlink=greadlink
+
+init_dir=$(dirname $(dirname `readlink -f $BASH_SOURCE`))/init
 
 export HISTFILESIZE=10000
 export HISTSIZE=500
