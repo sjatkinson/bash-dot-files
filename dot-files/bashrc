@@ -1,4 +1,3 @@
-
 init_dir=~/.bash.d/init
 
 export HISTFILESIZE=10000
@@ -20,3 +19,5 @@ source $init_dir/work.bash
 
 PROMPT_COMMAND=__prompt_command # prompt function is in functions.bash
 
+[ -f `which fasd` ] && eval "$(fasd --init auto)" 
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
