@@ -1,4 +1,4 @@
-init_dir=$(dirname $(dirname `readlink -f $BASH_SOURCE`))/init
+init_dir=$(dirname $(dirname `readlink $BASH_SOURCE`))/init
 
 export HISTFILESIZE=10000
 export HISTSIZE=500
