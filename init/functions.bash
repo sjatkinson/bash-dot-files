@@ -1,6 +1,6 @@
 # common or useful function for our startup files or while in an interactive shell
 
-__prompt_command() {
+function __prompt_command() {
     local Exit="$?"             # This needs to be first
     PS1=""
 
@@ -23,7 +23,7 @@ __prompt_command() {
 
 
 # fd - fuzzy cd 
- fd() {
+function fd() {
    local dir
      dir=$(find ${1:-.} -path '*/\.*' -prune \
                           -o -type d -print 2> /dev/null | fzf +m) &&
